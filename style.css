@@ -1,3 +1,8 @@
+:root {
+  --primary-color: rgb(227, 183, 62);
+  --secondary-color: rgb(81, 13, 2);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +23,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(227, 183, 62);
+  background-color: var(--primary-color);
   width: 100%;
   padding: 20px;
 }
@@ -132,8 +137,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background-color: rgb(81, 13, 2);
+  background-color: var(--secondary-color);
   position: relative;
   width: 100%;
 }
@@ -145,15 +149,14 @@ body {
 
 .nav-bar a {
   text-decoration: none;
-  color: rgb(227, 183, 62);
+  color: var(--primary-color);
   font-size: 1.6rem;
   font-weight: bold;
   transition: all 0.2s;
   padding: 15px 20px;
 }
 
-#open-menue,
-#close-menue {
+#open-menue {
   padding: 15px 20px;
   font-size: 1.6rem;
   display: none;
@@ -172,7 +175,7 @@ body {
 .selector {
   display: none;
   position: absolute;
-  background-color: rgb(81, 13, 2);
+  background-color: var(--secondary-color);
   margin-top: 10px;
   width: inherit;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
@@ -198,7 +201,7 @@ body {
 }
 
 .selector div:hover {
-  background-color: rgb(227, 183, 62);
+  background-color: var(--primary-color);
   transition: all 0.5s;
 }
 
@@ -259,7 +262,7 @@ body {
 }
 .slide button {
   border-radius: 20px;
-  background-color: rgb(227, 183, 62);
+  background-color: var(--primary-color);
   border: none;
   padding: 13px 30px;
   cursor: pointer;
@@ -292,7 +295,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(227, 183, 62);
+  background-color: var(--primary-color);
   width: 25%;
   justify-content: center;
 }
@@ -336,7 +339,7 @@ body {
   width: 100%;
 }
 .prayer-title {
-  color: rgb(227, 183, 62);
+  color: var(--primary-color);
   font-size: 3rem;
   font-weight: bold;
 }
@@ -392,14 +395,14 @@ body {
   margin: 0;
   padding: 2px 5px;
   border-radius: 5px;
-  background-color: rgb(51, 8, 2);
+  background-color: var(--secondary-color);
   color: rgb(150, 119, 114);
 }
 .prayer-timetable {
   background-color: white;
   max-width: 95%;
   padding: 30px;
-  color: rgb(89, 25, 15);
+  color: var(--secondary-color);
 }
 .timetable-sections {
   display: grid;
@@ -438,7 +441,7 @@ body {
 }
 
 .timetable-active {
-  background-color: rgb(89, 25, 15);
+  background-color: var(--secondary-color);
   color: white;
 }
 
@@ -499,7 +502,7 @@ body {
 }
 .new-right-content p {
   font-size: 1.4rem;
-  color: #e3b73e;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 .new-right-content h3 {
@@ -508,7 +511,7 @@ body {
 }
 .new-right-content a {
   text-decoration: none;
-  color: #e3b73e;
+  color: var(--primary-color);
   font-size: 1.2rem;
 }
 .pages {
@@ -519,7 +522,7 @@ body {
 }
 .pages a {
   text-decoration: none;
-  color: #e3b73e;
+  color: var(--primary-color);
   padding: 0 10px;
 }
 
@@ -529,7 +532,7 @@ footer {
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: rgb(81, 13, 2);
+  background: var(--secondary-color);
   height: 235px;
   margin-top: 40px;
 }
@@ -540,10 +543,10 @@ footer .container > div {
   height: 100%;
   width: 25%;
   padding: 10px;
-  border-right: 1px solid rgb(220, 178, 62);
+  border-right: 1px solid var(--primary-color);
 }
 footer .container > div h1 {
-  color: rgb(220, 178, 62);
+  color: var(--primary-color);
   font-size: 2.2rem;
 }
 footer .container > div p {
@@ -559,7 +562,7 @@ footer .container > div button {
   color: white;
   padding: 13px;
   max-width: 130px;
-  background: rgb(220, 178, 62);
+  background: var(--primary-color);
   border: none;
   border-radius: 3px;
   cursor: pointer;
@@ -573,7 +576,7 @@ footer .container > div:last-child {
   border: none;
 }
 footer .container > div p i {
-  color: rgb(220, 178, 62);
+  color: var(--primary-color);
 }
 .quick-links p {
   cursor: pointer;
@@ -612,17 +615,14 @@ footer .container > div form input:focus {
   .nav-bar .container {
     flex-direction: column;
   }
-  .nav-bar .container a {
+  .nav-bar .container {
     display: none;
   }
   .nav .container > * {
     margin: 0;
   }
   #open-menue {
-    display: block;
-  }
-  #open-menue,
-  #close-menue {
+    display: flex;
     align-self: flex-start;
   }
 }
@@ -658,7 +658,7 @@ footer .container > div form input:focus {
   footer .container > div {
     width: 100%;
     border: none;
-    border-bottom: 1px solid #e3b73e;
+    border-bottom: 1px solid var(--primary-color);
   }
 }
 @media (max-width: 640px) {
